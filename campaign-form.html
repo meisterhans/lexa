@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" name="viewport">
+		<meta name="author" content="QuatroIT">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="shortcut icon" href="">
+		<meta name="robots" content="noindex, nofollow" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
+		<link rel="stylesheet" type="text/css" href="css/nice-select.css">
+		<link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>		
+		<title>Добавить кампанию</title>
+	</head>
+	<body>
+		<div class="page company_form">
+			<div class="wrapper d-flex">
+				<div class="sidebar d-flex">
+					<div class="sidebar_inner">
+						<div class="top">
+							<a class="mob_toggle" href="#">
+								<span></span>
+								<span></span>
+								<span></span>
+							</a>
+							<a class="logo_text" href="#">Sense<br> Machine</a>
+						</div>	
+						<div class="middle">
+							<div class="user_avatar">
+								<a href="#"><img src="img/user-avatar.svg"></a>
+							</div>
+							<div class="user_id">USER7778928</div>
+							<div class="user_name">Александр Петровенко</div>
+							<a href="#" class="logout_btn">Выйти</a>						
+						</div>									
+						<ul class="user_menu">
+							<li class="active"><a href="#">Кампании</a></li>
+							<li><a href="#">Настройки</a></li>
+							<li><a href="#">Уведомления <span class="badge">14</span></a></li>
+							<li><a href="#">Поддержка<span class="badge">2</span></a></li>
+						</ul>
+					</div>	
+					<div class="sidebar_help">
+						<a href="#">Помощь</a>
+					</div>				
+				</div>
+				<div class="content">
+					<div class="tabs clearfix withbutton">
+						<a href="#" class="tab_link add_campaign">Добавить кампанию</a>
+						<a href="#" class="tab_link active"><i class="fa fa-th"></i>Все</a>
+						<a href="#" class="tab_link"><i class="fas fa-play"></i>Активные</a>
+						<a href="#" class="tab_link"><i class="fas fa-pause"></i>Просмотренные</a>
+						<a href="#" class="tab_link"><i class="fas fa-stop"></i>Завершенные</a>
+						<a href="#" class="tab_link"><i class="fas fa-archive"></i>В архиве</a>
+					</div>
+					<div class="form">
+						<form>
+							<div class="form_step step1">
+								<div class="step_header">
+									<div class="step_title">Добавление кампании</div>
+									<div class="step_count">Шаг 1 из 3</div>
+								</div>
+								<div class="step_content">
+									<span class="title">Общие сведения</span>
+									<div class="form_row d-flex">
+										<div class="form_column">
+											<input type="text" name="company_name" placeholder="Название кампании">
+											<textarea placeholder="Описание кампании"></textarea>
+										</div>
+										<div class="form_column">
+											<select name="category" class="wide">
+												<option value="1" disabled selected>Категория контента</option>
+											</select>
+											<select name="content-type" class="wide">
+												<option value="1" disabled selected>Тип контента</option>
+											</select>
+											<input type="text" name="content-link" placeholder="Вставьте ссылку на ваш контент">
+										</div>
+										<div class="file_wrap">
+											<span>или</span>
+											<input type="file" name="file" id="file" class="inputfile" />
+											<label for="file">Нажмите или перетащите файл</label>
+											<span class="file_info">Файл загружен</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_step step2">
+								<div class="step_header">
+									<div class="step_title">Аудитория</div>
+									<div class="step_count">Шаг 2 из 3</div>
+									<span>Закупка аудитории</span>
+									<div class="custom_switch">
+									  <input type="checkbox" class="custom_control_input" id="customSwitch1" name="auditory">
+									  <label class="custom_control_label" for="customSwitch1">Своя аудитория</label>
+									</div>
+								</div>
+								<div class="step_content">
+									<div class="form_row d-flex">
+										<div class="form_column">
+											<select class="multiple" multiple="multiple" placeholder="Интересы">
+												<option value="1">Авто</option>
+												<option value="2">Мото</option>
+												<option value="3">Аква</option>
+												<option value="4">Моно</option>
+												<option value="5">Стерео</option>
+											</select>
+											<div class="chosen">
+												<!-- <span class="closable close">Авто</span> -->
+											</div>
+											<span>До 12 интересов</span>
+										</div>
+										<div class="form_column">
+											<select name="category" class="wide">
+												<option value="1" disabled selected>Возраст</option>
+											</select>
+											<select name="content-type" class="wide">
+												<option value="1" disabled selected>Пол</option>
+											</select>
+											<select name="content-type" class="wide">
+												<option value="1" disabled selected>Семейное положение</option>
+											</select>
+										</div>
+										<div class="form_column">
+											<select name="category" class="wide">
+												<option value="1" disabled selected>Страна</option>
+											</select>
+											<select name="content-type" class="wide">
+												<option value="1" disabled selected>Город</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_step step2">
+								<div class="step_header">
+									<div class="step_title">Аудитория</div>
+									<div class="step_count">Шаг 2 из 3</div>
+									<span>Закупка аудитории</span>
+									<div class="custom_switch">
+									  <input type="checkbox" checked class="custom_control_input" id="customSwitch2" name="auditory">
+									  <label class="custom_control_label" for="customSwitch2">Своя аудитория</label>
+									</div>
+								</div>
+								<div class="step_content">
+									<p>По этой ссылке вы можете показывать контент вашей аудитории</p>
+									<div class="content_link">
+										<input type="text" name="copy-text" value="https://www/sensemachine.ru/company/3Fa3i0qwi" readonly>
+										<button class="copy" type="button">Скопировать</button>
+									</div>
+								</div>
+							</div>
+							<div class="form_step step3">
+								<div class="step_header">
+									<div class="step_title">Выставите бюджет</div>
+									<div class="step_count">Шаг 3 из 3</div>
+								</div>
+								<div class="step_content">
+									<div class="form_row d-flex">
+										<div class="form_column">
+											<div class="show_count">
+												Количество показов
+											</div>
+											<button type="button" class="add_card">Привязать карту</button>
+										</div>
+										<div class="form_column">
+											<p>= <span class="sum">40000</span> рублей</p>
+											<input type="submit" name="submit" value="Запустить">
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<script type="text/javascript" src="js/jquery.nice-select.min.js"></script>
+		<script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>  		
+	</body>

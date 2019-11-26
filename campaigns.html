@@ -9,6 +9,8 @@
 		<link rel="shortcut icon" href="">
 		<meta name="robots" content="noindex, nofollow" />
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>		
 		<title>Кампании</title>
@@ -47,7 +49,7 @@
 				</div>
 				<div class="content">
 					<div class="tabs clearfix">
-						<a href="#" class="tab_link active">Все</a>
+						<a href="#" class="tab_link active"><i class="fa fa-th"></i>Все</a>
 						<a href="#" class="tab_link">Активные</a>
 						<a href="#" class="tab_link">Просмотренные</a>
 					</div>
@@ -60,12 +62,14 @@
 							<div class="campaign_item d-flex">
 								<div class="campaign_item_main">
 									<div class="thumb">
-										<a href="#" class="video_popup"><img src="img/item-1.png"></a>
+										<a href="#" class="video_popup" data-video="video/Coca-Cola.mp4"><img src="img/item-1.png"></a>
 									</div>
-									<div class="campaign_title">
-										<a href="#">Кампания №1 (модульные видео о строительстве)</a> 
-										<span class="viewed_text">Просмотрено</span>
-									</div>
+									<div class="campaign_main">
+										<div class="campaign_title">
+											<a href="#">Кампания №1 (модульные видео о строительстве)</a> 
+											<span class="viewed_text">Просмотрено</span>
+										</div>
+									</div>									
 								</div>
 								<div class="campaign_item_info">
 									<div class="review_count">0</div>
@@ -96,13 +100,15 @@
 									<div class="thumb">
 										<a href="#" class="video_popup"><img src="img/item-2.png"></a>
 									</div>
-									<div class="campaign_title">
-										<a href="#">Кампания №12</a> 
-										<span class="viewed_text">Просмотрено</span>
+									<div class="campaign_main">
+										<div class="campaign_title">
+											<a href="#">Кампания №12</a> 
+											<span class="viewed_text">Просмотрено</span>
+										</div>
 									</div>
 								</div>
 								<div class="campaign_item_info">
-									<div class="review_count reviewed">12</div>
+									<div class="review_count red">12</div>
 									<div class="campaign_progress_wrap">
 										<span class="campaign_progress yellow"></span>
 										<span class="campaign_progress red"></span>
@@ -130,9 +136,11 @@
 									<div class="thumb">
 										<a href="#" class="video_popup"><img src="img/item-3.png"></a>
 									</div>
-									<div class="campaign_title">
-										<a href="#">Кампания №1 (модульные видео о строительстве)</a> 
-										<span class="viewed_text">Просмотрено</span>
+									<div class="campaign_main">
+										<div class="campaign_title">
+											<a href="#">Кампания №1 (модульные видео о строительстве)</a> 
+											<span class="viewed_text">Просмотрено</span>
+										</div>
 									</div>
 								</div>
 								<div class="campaign_item_info">
@@ -164,9 +172,11 @@
 									<div class="thumb">
 										<a href="#" class="video_popup"><img src="img/item-2.png"></a>
 									</div>
-									<div class="campaign_title">
-										<a href="#">Кампания №1 (модульные видео о строительстве)</a> 
-										<span class="viewed_text">Просмотрено</span>
+									<div class="campaign_main">
+										<div class="campaign_title">
+											<a href="#">Кампания №1 (модульные видео о строительстве)</a> 
+											<span class="viewed_text">Просмотрено</span>
+										</div>
 									</div>
 								</div>
 								<div class="campaign_item_info">
@@ -197,5 +207,21 @@
 					</div>
 				</div>
 			</div>
-		</div>	  		
+			<div class="modal" id="video_modal">
+				<div class="modal_wrapper"></div>
+				<div class="modal_inner">
+					<div class="close">
+						<span></span>
+						<span></span>
+					</div>
+					<div class="video">
+						<video-js class="video-js" controls fluid preload="auto">
+						  <source src="video/Coca-Cola.mp4" type="video/mp4">
+						</video-js>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
+		<script type="text/javascript" src="js/campaigns.js"></script>  		
 	</body>
