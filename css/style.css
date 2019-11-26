@@ -1085,7 +1085,7 @@ h2 {
 /* Campaigns Page*/
 
 .content {
-    padding: 17px 80px 0 37px;
+    padding: 17px 4.3% 0 37px;
     width: calc(100% - 355px);
 }
 .tab_link {
@@ -1318,6 +1318,9 @@ h2 {
 .sidebar_help a {
     color: #7D7D7D;
 }
+.campaigns .content {
+    padding-right: 
+}
 .campaigns_list_top {
     padding: 14px 0 12px;
 }
@@ -1340,6 +1343,7 @@ h2 {
     width: 63.5%;
     border-right: 1px solid #EEEEEE;
     display: inline-flex;
+    align-items: center;
 }
 .campaign_item_info {
     width: 36.5%;
@@ -1349,7 +1353,7 @@ h2 {
     background-color: #fff;
     overflow: hidden;
     margin-bottom: 15px;
-    min-height: 93px;
+    min-height: 93px;    
 }
 .campaign_item.viewed .campaign_title .viewed_text {
     display: block;
@@ -1370,14 +1374,13 @@ h2 {
     background-color: #A8A8A8 !important;
 }
 .campaign_item .thumb {
-    height: 100%;
     max-width: 242px;
     position: relative;
     flex: 1 0 auto;
 }
 .campaign_item .thumb img {
-    height: 100%;
     object-fit: cover;
+    display: block;
 }
 .campaign_item .thumb .video_popup::before {
     content: url('../img/video-play.svg');
@@ -1413,6 +1416,7 @@ h2 {
     padding-right: 16px;
     display: inline-flex;
     align-items: center;
+    justify-content: space-between;
 }
 .campaign_item .campaign_item_info .review_count {
     font-weight: bold;
@@ -1425,7 +1429,6 @@ h2 {
     border-radius: 10px;
     text-align: center;
     flex: 0 0 auto;
-    margin-left: 5.5%;
 }
 .campaign_item .campaign_item_info .review_count.red {
     background-color: #F42F2F;
@@ -1450,7 +1453,7 @@ h2 {
 }
 
 .campaign_item .campaign_progress_wrap {
-    margin-left: 17px;
+    margin-left: 5px;
     width: 152px;
 }
 .campaign_item .campaign_progress_wrap .campaign_progress {
@@ -1495,8 +1498,8 @@ h2 {
     padding-left: 14px;
     border-left: 1px solid #EEEEEE;
     height: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 13px;
+    padding-bottom: 13px;
 }
 .campaign_add .add {
     width: 35px;
@@ -1534,7 +1537,8 @@ h2 {
     visibility: hidden;
     transition: opacity .3s, visibility .3s;
     overflow: auto;
-    padding-top: 127px;
+    background-color: #fff;
+    /*padding-top: 127px;*/
     z-index: 999;
 }
 .modal_wrapper {
@@ -1549,7 +1553,9 @@ h2 {
 }
 .modal_inner {
     padding-top: 84px;
-    height: 895px;
+    padding-bottom: 84px;
+    padding-left: 50px;
+    padding-right: 50px;
     background: #FFFFFF;
     position: relative;
 }
@@ -1622,6 +1628,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .campaign_counter_bottom {
     height: 50%;
@@ -1671,10 +1678,187 @@ h2 {
 .campaign {
     margin-top: 15px;
 }
-.campaign_main {
+.campaign_main, 
+.campaign_chart {
     background-color: #fff;
     border-radius: 10px;
     padding: 17px 40px 40px 50px;
+}
+.campaign_chart {
+    margin-top: 15px;
+    padding-top: 125px;
+    margin-bottom: 15px;
+}
+.campaign_chart .checkmarks {
+    padding-left: 170px;
+    padding-right: 170px;
+    justify-content: space-between;
+}
+.campaign_chart .checkmark {
+    position: relative;
+    display: inline-block;
+}
+.campaign_chart .checkmark > span {
+    font-size: 14px;
+    line-height: 16px;
+    color: #5F5F5F;
+    font-weight: 300;
+}
+.campaign_chart .checkmark > span::before {
+    display: inline-block;
+    color: #fff;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 13px;
+    font-weight: 600;
+}
+.campaign_chart .checkmark img {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+}
+.campaign_chart .checkmark:hover .checkmark_popup {
+    opacity: 1;
+    visibility: visible;
+}
+.campaign_chart .checkmark .checkmark_popup {
+    padding: 15px 30px 26px 27px;
+    position: absolute;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    bottom: 2em;
+    right: -40px;
+    min-width: 279px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+}
+.campaign_chart .checkmark .checkmark_popup::before {
+    position: absolute;
+    bottom: -10px;
+    right: 43px;
+    transform: translateX(50%);
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;      
+    border-top: 10px solid #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.campaign_chart .checkmark .checkmark_popup .title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+}
+.campaign_chart .checkmark .checkmark_popup .middle {
+    justify-content: space-between;
+    align-items: center;
+}
+.campaign_chart .checkmark .checkmark_popup .text {
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: #8D8D8D;
+    width: 75%;
+    text-align: left;
+}
+.campaign_chart .checkmark .checkmark_popup .counter {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #3E3E3E;
+}
+.campaign_chart .checkmark .checkmark_popup .link {
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: #6774E9;
+}
+.campaign_chart .checkmark .checkmark_popup .progress {
+    position: relative;
+    background: #D5D5D5;
+    margin-top: 12px;
+    border-radius: 3px;
+    width: 100%;
+    height: 6px;
+}
+.campaign_chart .checkmark .checkmark_popup .progress > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #D5D5D5;
+    border-radius: 3px;
+    width: 33%;
+    height: 6px;
+}
+.campaign_chart .checkmark.current > span::before {
+    color: #363636;
+}
+.campaign_chart .checkmark.yellow > span::before {
+    background-color: #FFC100;
+}
+.campaign_chart .checkmark.blue > span::before {
+    background-color: #007FB5;
+}
+.campaign_chart .checkmark.violet > span::before {
+    background-color: #814B9E;
+}
+.campaign_chart .checkmark.red > span::before {
+    background-color: #F72615;
+}
+.campaign_chart .checkmark.green > span::before {
+    background-color: #90C700;
+}
+.campaign_chart .checkmark.purple > span::before {
+    background-color: #F74497;
+}
+
+.campaign_chart .checkmark.yellow .checkmark_popup .progress > span {
+    background-color: #FFC100;
+}
+.campaign_chart .checkmark.blue .checkmark_popup .progress > span {
+    background-color: #007FB5;
+}
+.campaign_chart .checkmark.violet .checkmark_popup .progress > span {
+    background-color: #814B9E;
+}
+.campaign_chart .checkmark.red .checkmark_popup .progress > span {
+    background-color: #F72615;
+}
+.campaign_chart .checkmark.green .checkmark_popup .progress > span {
+    background-color: #90C700;
+}
+.campaign_chart .checkmark.purple .checkmark_popup .progress > span{
+    background-color: #F74497;
+}
+
+.campaign_chart .checkmark.yellow .checkmark_popup .title {
+    color: #FFC100;
+}
+.campaign_chart .checkmark.blue .checkmark_popup .title {
+    color: #007FB5;
+}
+.campaign_chart .checkmark.violet .checkmark_popup .title {
+    color: #814B9E;
+}
+.campaign_chart .checkmark.red .checkmark_popup .title {
+    color: #F72615;
+}
+.campaign_chart .checkmark.green .checkmark_popup .title {
+    color: #90C700;
+}
+.campaign_chart .checkmark.purple .checkmark_popup .title {
+    color: #F74497;
 }
 .campaign_main .back {
     font-weight: 300;

@@ -18,7 +18,7 @@ $(document).ready(function() {
           $('#video_modal').removeClass('open');
           $("body").css({"overflow-y": "auto"});
         });
-    }    
+    }  
     
 });
 
