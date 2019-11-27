@@ -2330,3 +2330,145 @@ h2 {
     justify-content: space-between;
     flex-direction: column;
 }
+
+
+/*Start calibration Page*/
+
+.start .header .title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.295em;
+    text-transform: uppercase;
+    color: #4A46F8;
+}
+.start .header {
+    padding-top: 8.5vh;
+    padding-bottom: 18px;
+}
+.start .header .title span {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.295em;
+    text-transform: uppercase;
+    color: #A8A8A8;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 15px;
+}
+.start .step {
+    padding-right: 78px;
+    padding-left: 96px;
+    padding-bottom: 8.5vh;
+}
+.start .step .header .close {
+    top: 52px;
+    right: -30px;
+}
+.start .step .text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3C3C3C;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.start .step .text > p {
+    margin-bottom: 8px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3C3C3C;
+}
+.start .step .text > span {    
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #969696;
+}
+.start .step3 .form {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: space-between;
+}
+.start .step3 .form .form_block::after {
+    content: url(../img/checkmark-inactive.svg);
+}
+.start .step3 .form .form_block.active::after {
+    content: url(../img/checkmark.svg);
+}
+.start .registration_form .btn {
+    height: 60px !important;
+    max-width: 235px;
+    position: relative;
+    line-height: 60px;
+}
+.start .registration_form .btn i {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 18px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.start .step3 .form .form_block {
+    margin-bottom: 44px;
+}
+.start .registration_form .checkbox a {
+    text-decoration: underline;
+    color: #4A46F8;
+}
+.start .registration_form .checkbox input {
+    display: none;
+}
+.start .registration_form .checkbox label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    text-align: left;
+    display: block;
+}
+.start .registration_form .checkbox label > span {
+    font-size: 14px;
+    line-height: 16px;
+    color: #898989;
+}
+.start .registration_form .checkbox label > span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background: #FFFFFF;
+    border: 1px solid #C5C5C5;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+}
+.start .registration_form .checkbox label > span::after {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 4px;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    color: #4A46F8;
+    font-size: 12px;
+    line-height: 10px;
+    text-align: center;
+    margin-right: 13px;
+    font-weight: 600;
+    font-family: 'Font Awesome 5 Free';
+    content: "\f00c";
+}
+.start .registration_form .checkbox input:checked+span::after {
+    display: block;
+}
